@@ -1,10 +1,10 @@
 /////////////////////////////
 // Скопировать тект в буфер//
 /////////////////////////////
-
 function copyToClipboard() {
     const str = document.getElementById('item-to-copy').innerText;
     const el = document.createElement('textarea');
+    document.getElementById('item-to-change').innerHTML = "Email-скопирован";
     el.value = str;
     el.setAttribute('readonly', '');
     el.style.position = 'absolute';
@@ -13,5 +13,4 @@ function copyToClipboard() {
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
-    alert("Email скопирован в буфер обмена.:");
 }
